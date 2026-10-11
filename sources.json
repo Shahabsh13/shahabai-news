@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "description": "RSS and Google News RSS sources for the Shahab news assistant. Review sources before enabling public automatic distribution.",
+  "sources": [
+    {
+      "id": "epl",
+      "category": "فوتبال جهان",
+      "name": "BBC Football",
+      "url": "https://feeds.bbci.co.uk/sport/football/rss.xml",
+      "language": "en"
+    },
+    {
+      "id": "iran-football",
+      "category": "فوتبال ایران",
+      "name": "Google News — Iranian football",
+      "url": "https://news.google.com/rss/search?q=%D9%81%D9%88%D8%AA%D8%A8%D8%A7%D9%84+%D8%A7%DB%8C%D8%B1%D8%A7%D9%86&hl=fa&gl=IR&ceid=IR:fa",
+      "language": "fa"
+    },
+    {
+      "id": "iran-tax",
+      "category": "حسابداری و مالیات",
+      "name": "Google News — Iranian tax and accounting",
+      "url": "https://news.google.com/rss/search?q=%D9%85%D8%A7%D9%84%DB%8C%D8%A7%D8%AA+OR+%D8%AD%D8%B3%D8%A7%D8%A8%D8%AF%D8%A7%D8%B1%DB%8C+OR+%D8%AA%D8%A7%D9%85%DB%8C%D9%86+%D8%A7%D8%AC%D8%AA%D9%85%D8%A7%D8%B9%DB%8C&hl=fa&gl=IR&ceid=IR:fa",
+      "language": "fa"
+    },
+    {
+      "id": "android-games",
+      "category": "بازی‌های اندروید",
+      "name": "Google News — Android game releases",
+      "url": "https://news.google.com/rss/search?q=Android+game+released+OR+launch+OR+Google+Play&hl=en-US&gl=US&ceid=US:en",
+      "language": "en"
+    },
+    {
+      "id": "gaming",
+      "category": "صنعت بازی",
+      "name": "Google News — video game industry",
+      "url": "https://news.google.com/rss/search?q=video+game+industry+gaming+news&hl=en-US&gl=US&ceid=US:en",
+      "language": "en"
+    },
+    {
+      "id": "ai",
+      "category": "هوش مصنوعی",
+      "name": "Google News — AI",
+      "url": "https://news.google.com/rss/search?q=artificial+intelligence+AI+model+release&hl=en-US&gl=US&ceid=US:en",
+      "language": "en"
+    },
+    {
+      "id": "other-sports",
+      "category": "سایر ورزش‌ها",
+      "name": "BBC Sport",
+      "url": "https://feeds.bbci.co.uk/sport/rss.xml",
+      "language": "en"
+    }
+  ]
+}

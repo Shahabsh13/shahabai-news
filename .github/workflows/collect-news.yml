@@ -1,0 +1,39 @@
+name: Collect news feeds
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 09:00 Asia/Tehran (UTC+03:30); GitHub Actions cron is UTC.
+    - cron: '30 5 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect-news
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Collect recent RSS items
+        run: python scripts/collect_news.py
+      - name: Commit updated news data
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/news.json
+          if git diff --cached --quiet; then
+            echo 'No changes in news data.'
+          else
+            git commit -m 'Update collected news data'
+            git push
+          fi
